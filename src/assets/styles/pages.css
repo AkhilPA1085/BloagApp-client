@@ -1,0 +1,73 @@
+/* login form */
+.login-page{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(#F5F8FA,#fff);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.login-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 2px 12px rgb(0 0 0 / 8%);
+    padding: 50px;
+    border-radius: 10px ;
+}
+.login-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.login-title{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #428bca;
+}
+
+
+/* register */
+.register-page{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(#F5F8FA,#fff);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.register-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 2px 12px rgb(0 0 0 / 8%);
+    padding: 50px;
+    border-radius: 10px ;
+}
+.register-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.register-title{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #428bca;
+}
+.link{
+    text-decoration: none;
+    color: inherit;
+}
+
