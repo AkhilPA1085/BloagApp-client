@@ -14,7 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Home/>}/>
+        <Route index element={user?<Home/>:<Login/>}/>
         <Route path="myposts" element={user?<MyPosts/>:<Register/>}/>
         <Route path="login" element={user?<Home/>:<Login/>}/>
         <Route path="register" element={user?<Home/>:<Register/>}/>

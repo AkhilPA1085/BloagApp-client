@@ -2,8 +2,7 @@ import axios from "axios";
 
 
 const BASE_URL = "https://blog-app-mern-stack-api.herokuapp.com/api/";
-const TOKEN = JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser.accessToken;
-
+const TOKEN = JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser;
 
 
 export const publicRequest = axios.create({

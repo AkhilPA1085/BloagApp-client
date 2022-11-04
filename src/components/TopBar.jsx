@@ -15,7 +15,6 @@ import { Stack } from "@mui/system";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { logout } from "../redux/apiCalls";
 import { logoutUser } from "../redux/userSlice";
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
@@ -25,20 +24,14 @@ const StyledTypography = styled(Typography)(({ theme }) => ({
 const TopBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const dispatch = useDispatch()
-  const user = useSelector(State=>State.user.currentUser.accessToken)
+  const user = useSelector(State=>State.user.currentUser)
   const userData = useSelector(State=>State.user.currentUser)
 
   const handleDrawerOpen = () => {
     console.log("drower open");
     setDrawerOpen(!drawerOpen);
   };
-  const handleLogout = ()=>{
-    dispatch(logoutUser(null))
-    window.location.replace("/login")
-  }
- 
-
-
+  
   const drawer = (
     <Box>
       <List sx={{ backgroundColor: "#fff", color: "#428bca" }}>
@@ -75,7 +68,7 @@ const TopBar = () => {
         <ListItem>
         
           {user ? (
-            <StyledTypography onClick={handleLogout}>
+            <StyledTypography>
               <Link className="link" to="">
                 Logout
               </Link>
@@ -165,7 +158,7 @@ const TopBar = () => {
             <List sx={{ display: "flex", alignItems: "center" }}>
               <ListItem>
                 {user ? (
-                  <StyledTypography onClick={handleLogout}>
+                  <StyledTypography>
                     <Link className="link" to="">
                       Logout
                     </Link>
