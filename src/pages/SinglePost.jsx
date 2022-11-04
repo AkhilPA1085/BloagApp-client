@@ -197,7 +197,7 @@ const SinglePost = () => {
                   {postData.description}
                 </StyledDescription>
               )}
-              <CommonButton
+              {user?._id === postData.userId &&(<CommonButton
                 props={{
                   type: "submit",
                   sx: { float: "right", marginTop: "30px" },
@@ -205,7 +205,7 @@ const SinglePost = () => {
                 buttonType="filled"
               >
                 Update
-              </CommonButton>
+              </CommonButton>)}
             </Grid>
           </Grid>
         </form>
